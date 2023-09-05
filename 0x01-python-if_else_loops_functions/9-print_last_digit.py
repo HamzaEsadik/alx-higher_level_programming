@@ -5,4 +5,4 @@ def print_last_digit(number):
     elif number >= 0:
         last = number % 10
     print("{:d}".format(last), end="")
-    return(last)
+    return (last)

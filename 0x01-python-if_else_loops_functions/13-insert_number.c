@@ -11,7 +11,6 @@
  */
 listint_t *insert_nodeint_at_index(listint_t **head, int idx, int n)
 {
-	listint_t *new;
 	listint_t *ptr = *head;
 	int i;
 
@@ -47,6 +46,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, int idx, int n)
  */
 listint_t *insert_node(listint_t **head, int number)
 {
+	listint_t *new;
 	listint_t *tmp;
 
 	if (head != NULL)
@@ -73,5 +73,8 @@ listint_t *insert_node(listint_t **head, int number)
 		return (new);
 	}
 	else
-		return (NULL);
+	{
+		new = insert_nodeint_at_index(head, idx, number);
+		return (new);
+	}
 }

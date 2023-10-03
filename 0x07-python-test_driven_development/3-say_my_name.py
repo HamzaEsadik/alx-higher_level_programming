@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module adds two numbers
+This module prints a sentence
 """
 
 
@@ -14,17 +14,14 @@ def say_my_name(first_name, last_name=""):
 
     Raises:
         TypeError: if argument are not strings
-
-    Return:
-        int: addition of a and bs
     """
-    #arguments are not string
+    # arguments are not string
     if type(first_name) is not str:
         raise TypeError("first_name must be a string")
     if type(last_name) is not str:
         raise TypeError("last_name must be a string")
 
-    #print the sentence
+    # print the sentence
     if first_name and last_name:
         print(f"My name is {first_name} {last_name}")
     elif first_name:

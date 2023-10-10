@@ -1,18 +1,10 @@
 #!/usr/bin/python3
-"""read_lines method"""
+"""method append_write"""
 
 
-def read_lines(filename="", nb_lines=0):
+def append_write(filename="", text=""):
     """
-    function that appends a string at the end of a text file (UTF8)
-    and returns the number of characters added
+    Method that appends a string at the end of a text file (UTF8)
     """
-    with open(filename, encoding="utf-8") as my_file_0:
-        if nb_lines <= 0:
-            print(my_file_0.read(), end="")
-        else:
-            for ln in my_file_0:
-                if nb_lines == 0:
-                    break
-                print(ln, end="")
-                nb_lines -= 1
+    with open(filename, mode="a", encoding="utf-8") as my_file_4:
+        return my_file_4.write(text)

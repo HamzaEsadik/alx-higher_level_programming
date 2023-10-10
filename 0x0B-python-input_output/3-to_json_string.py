@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""method append_write"""
+"""to_json_string Method"""
+import json
 
 
-def append_write(filename="", text=""):
-    """
-    function that returns an object
-    represented by a JSON string
-    """
-    with open(filename, mode="a", encoding="utf-8") as my_file_4:
-        return my_file_4.write(text)
+def to_json_string(my_obj):
+        """
+        Method that returns the JSON representation of an object
+        """
+        return json.dumps(my_obj)

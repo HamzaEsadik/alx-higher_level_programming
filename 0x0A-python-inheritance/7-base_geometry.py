@@ -9,9 +9,11 @@ class BaseGeometry:
     def __init__(self):
         """new instance of BaseGeometry"""
         pass
+
     def area(self):
         """Public instance method that raise an exception"""
         raise Exception("area() is not implemented")
+
     def integer_validator(self, name, value):
         """Public instance method that validates value"""
         if type(value) is not int:

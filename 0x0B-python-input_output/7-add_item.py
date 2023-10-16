@@ -13,7 +13,7 @@ jsonlist = []
 if os.path.exists(file):
     jsonlist = load_jason_file(file)
 
-for element in range(1, len(sys.argv)):
+for element in sys.argv:
     jsonlist.append(sys.argv[element])
 
 save_json_file(jsonlist, file)

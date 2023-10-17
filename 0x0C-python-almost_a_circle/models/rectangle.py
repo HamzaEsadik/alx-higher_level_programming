@@ -26,13 +26,13 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """width Getter"""
+        """width Getter for rectangel class"""
         return self.__width
 
     @width.setter
     def width(self, width):
         """
-        width Setter
+        width Setter  for rectangel class
 
         args:
             - width (int): Width of the rectangle.
@@ -46,13 +46,13 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """height Getter"""
+        """height Getter for rectangel class"""
         return self.__height
 
     @height.setter
     def height(self, height):
         """
-        height Setter
+        height Setter for rectangel class
 
         args:
             - height (int): height of the rectangle.
@@ -66,13 +66,13 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """x Getter"""
+        """x Getter for rectangel class"""
         return self.__x
 
     @x.setter
     def x(self, x):
         """
-        x Setter
+        x Setter for rectangel class
 
         args:
             - x (int): x of the rectangle.
@@ -86,13 +86,13 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """y Getter"""
+        """y Getter for rectangel class"""
         return self.__y
 
     @y.setter
     def y(self, y):
         """
-        y Setter
+        y Setter for rectangel class
 
         args:
             - y (int): y of the rectangle.
@@ -105,11 +105,11 @@ class Rectangle(Base):
             self.__y = y
 
     def area(self):
-        """Area method"""
+        """method that calculate area of rectangle"""
         return self.__height * self.__width
 
     def display(self):
-        """print to stdout"""
+        """print Rectangel as # to stdout"""
         print("\n"*self.__y, end='')
         for i in range(self.__height):
             print(" "*self.__x, end='')

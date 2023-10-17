@@ -22,3 +22,13 @@ class Square(Rectangle):
             - y: int
         """
         super().__init__(size, size, x, y, id)
+
+    def __str__(self):
+        """
+        Return a string representation of the rectangle.
+
+        Format:
+            "[Square] (<id>) <x>/<y> - <size>"
+        """
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "\
+               f"{self.size}"

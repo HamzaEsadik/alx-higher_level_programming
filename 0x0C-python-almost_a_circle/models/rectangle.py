@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""Rectangle Module python3"""
+"""
+Rectangle Module python3
+from models.base import Base
+Base = __import__("base").Base
+"""
 from models.base import Base
 
 

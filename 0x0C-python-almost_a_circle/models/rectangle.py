@@ -4,7 +4,16 @@ Base = __import__("base").Base
 
 
 class Rectangle(Base):
-    """Rectangle Class that enherit from Base"""
+    """
+    Rectangle Class that enherit from Base
+
+    arguments:
+        -width: width of triangle
+        -height: height of triangle
+        -x: int
+        -y: int
+        -id: id
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """init method"""
@@ -88,7 +97,8 @@ class Rectangle(Base):
             print("\n", end='')
 
     def __str__(self):
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "\
+               f"{self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
         """Update method"""

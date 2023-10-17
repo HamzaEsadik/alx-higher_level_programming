@@ -42,42 +42,22 @@ class Square(Rectangle):
         self.height = value
 
 def update(self, *args, **kwargs):
-        """assigns an argument to each attribute:
-        Args:
-            *args: list of arguments - no-keyworded arguments.
-                1st id attribute.
-                2nd size attribute.
-                3rd x attribute.
-                4th y attribute.
-            **kwargs: x2 pointer to a dictionary: key/value keyworded arguments
-        """
-        arg_increment = 0
-        if args and len(args) != 0:
-            for _arg_ in args:
-                if arg_increment == 0:
-                    if _arg_ is None:
-                        self.__init__(self.size, self.x, self.y)
-                    else:
-                        self.id = _arg_
-                elif arg_increment == 1:
-                    self.size = _arg_
-                elif arg_increment == 2:
-                    self.x = _arg_
-                elif arg_increment == 3:
-                    self.y = _arg_
-
-                arg_increment = arg_increment + 1
-
-        elif kwargs and len(kwargs) != 0:
-            for _key_, _val_ in kwargs.items():
-                if _key_ == "id":
-                    if _val_ is None:
-                        self.__init__(self.size, self.x, self.y)
-                    else:
-                        self.id = _val_
-                elif _key_ == "size":
-                    self.size = _val_
-                elif _key_ == "x":
-                    self.x = _val_
-                elif _key_ == "y":
-                    self.y = _val_
+    if args:
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.size = args[1]
+            if len(args) >= 3:
+                self.x = args[2]
+            if len(args) >= 4:
+                self.y = args[3]
+    else:
+        for key, value in kwargs.items():
+            if key == 'size':
+                self.size = value
+            elif key == 'x':
+                self.x = value
+            elif key == 'y':
+                self.y = value
+            elif key == 'id':
+                self.id = value

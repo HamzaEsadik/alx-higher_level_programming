@@ -17,6 +17,12 @@ class Rectangle(Base):
             - x (int): Horizontal position.
             - y (int): Vertical position.
             - id: Identifier.
+
+        Raises:
+            - TypeError: If the input is not an integer
+            - ValueError: if either of width or height <= 0.
+            - TypeError: If either of x or y is not an int.
+            - ValueError: if either of x or y < 0.
         """
         super().__init__(id)
         self.width = width

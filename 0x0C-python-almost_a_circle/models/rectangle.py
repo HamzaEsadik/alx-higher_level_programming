@@ -5,18 +5,19 @@ Base = __import__("base").Base
 
 class Rectangle(Base):
     """
-    Rectangle Class that inherits from Base.
-
-    Arguments:
-        - width (int): Width of the rectangle.
-        - height (int): Height of the rectangle.
-        - x (int): Horizontal position.
-        - y (int): Vertical position.
-        - id: Identifier.
+    Rectangle Class that inherits from Base super class.
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """init method"""
+        """
+        init method for Rectangle Class
+        Arguments:
+            - width (int): Width of the rectangle.
+            - height (int): Height of the rectangle.
+            - x (int): Horizontal position.
+            - y (int): Vertical position.
+            - id: Identifier.
+        """
         super().__init__(id)
         self.width = width
         self.height = height

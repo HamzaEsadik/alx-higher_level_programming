@@ -122,7 +122,7 @@ class Rectangle(Base):
         Return a string representation of the rectangle.
 
         Format:
-        "[Rectangle] (id) x/y - width/height"
+            "[Rectangle] (id) x/y - width/height"
         """
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "\
                f"{self.__width}/{self.__height}"
@@ -132,8 +132,8 @@ class Rectangle(Base):
         Update the attributes of the rectangle.
 
         Args:
-        *args: Variable positional arguments.
-        **kwargs: Variable keyword arguments.
+            *args: Variable positional arguments.
+            **kwargs: Variable keyword arguments.
         """
         if args:
             if len(args) >= 1:

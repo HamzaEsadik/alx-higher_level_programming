@@ -28,5 +28,5 @@ class Square(Rectangle):
         """
         Return a string representation of the rectangle.
         """
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - "\
+        return f"[Square] ({self.id}) {self.x}/{self.y} - "\
                f"{self.size}"

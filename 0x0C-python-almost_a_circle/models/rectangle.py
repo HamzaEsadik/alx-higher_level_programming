@@ -7,15 +7,7 @@ class Rectangle(Base):
     """Rectangle Class that enherit from Base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """
-        Init Method for Rectangle Class
-
-        Arguments:
-            -width: width of Rectangle
-            -width: width of Rectangle
-            -x: int arg
-            -y: int arg
-        """
+        """init method"""
         super().__init__(id)
         self.__width = width
         self.__height = height

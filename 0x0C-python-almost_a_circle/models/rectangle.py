@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''Rectangle Model'''
+'''Rectangle Module'''
 Base = __import__("base").Base
 
 
@@ -15,11 +15,11 @@ class Rectangle(Base):
             -x: int arg
             -y: int arg
         '''
+        super().__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
-        '''constactor'''
         super().__init__(id)
 
     @property

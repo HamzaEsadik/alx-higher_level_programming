@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""Rectangle Module"""
+"""Module for Rectangle class"""
 Base = __import__("base").Base
 
 
 class Rectangle(Base):
-    """Rectangle Class that enherit from Base"""
+    """class Rectangle that inherits from Base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """init method"""
+        """Constructor"""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -16,89 +16,83 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """width Getter"""
+        """width of a rectangle"""
         return self.__width
 
     @width.setter
-    def width(self, width):
-        """width Setter"""
-        if type(width) is not int:
-            raise TypeError(f"width must be an integer")
-        elif width <= 0:
-            raise ValueError(f"width must be > 0")
-        else:
-            self.__width = width
+    def width(self, value):
+        """setter width"""
+        if type(value) is not int:
+            raise TypeError('width must be an integer')
+        if value <= 0:
+            raise ValueError('width must be > 0')
+        self.__width = value
 
     @property
     def height(self):
-        """height Getter"""
+        """height of a rectangle"""
         return self.__height
 
     @height.setter
-    def height(self, height):
-        """height Setter"""
-        if type(height) is not int:
-            raise TypeError(f"height must be an integer")
-        elif height <= 0:
-            raise ValueError(f"height must be > 0")
-        else:
-            self.__height = height
+    def height(self, value):
+        """setter height"""
+        if type(value) is not int:
+            raise TypeError('height must be an integer')
+        if value <= 0:
+            raise ValueError('height must be > 0')
+        self.__height = value
 
     @property
     def x(self):
-        """x Getter"""
+        """coordinate x"""
         return self.__x
 
     @x.setter
-    def x(self, x):
-        """x Setter"""
-        if type(x) is not int:
-            raise TypeError(f"x must be an integer")
-        elif x < 0:
-            raise ValueError(f"x must be >= 0")
-        else:
-            self.__x = x
+    def x(self, value):
+        """setter x"""
+        if type(value) is not int:
+            raise TypeError('x must be an integer')
+        if value < 0:
+            raise ValueError('x must be >= 0')
+        self.__x = value
 
     @property
     def y(self):
-        """y Getter"""
+        """coordinate x"""
         return self.__y
 
     @y.setter
-    def y(self, y):
-        """y Setter"""
-        if type(y) is not int:
-            raise TypeError(f"y must be an integer")
-        elif y < 0:
-            raise ValueError(f"y must be >= 0")
-        else:
-            self.__y = y
+    def y(self, value):
+        """setter y"""
+        if type(value) is not int:
+            raise TypeError('y must be an integer')
+        if value < 0:
+            raise ValueError('y must be >= 0')
+        self.__y = value
 
     def area(self):
-        """Area method"""
-        return self.__height * self.__width
+        """Public method: returns the area value of the Rectangle"""
+        return self.width * self.height
 
     def display(self):
-        """print to stdout"""
-        print("\n"*self.__y, end='')
-        for i in range(self.__height):
-            print(" "*self.__x, end='')
-            for j in range(self.__width):
-                print("#", end='')
-            print("\n", end='')
+        """
+        Public method: prints in stdout the Rectangle instance
+        with the character #
+        """
+        print('\n' * self.y + '\n'.join([' ' * self.x +
+                                         '#' * self.width
+                                         for i in range(self.height)]))
 
     def __str__(self):
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        """Prints string representation of a Rectangle"""
+        return '[{}] ({}) {}/{} - {}/{}'.\
+            format(type(self).__name__, self.id, self.x, self.y,
+                   self.width, self.height)
 
     def update(self, *args, **kwargs):
-        """Update method"""
-        if len(args) >= 1:
-            self.id = args[0]
-        if len(args) >= 2:
-            self.width = args[1]
-        if len(args) >= 3:
-            self.height = args[2]
-        if len(args) >= 4:
-            self.x = args[3]
-        if len(args) >= 5:
-            self.y = args[4]
+        """Public method: assigns an argument to each attribute"""
+        attributes = ["id", "width", "height", "x", "y"]
+        for atrr, arg in zip(attributes, args):
+            setattr(self, atrr, arg)
+        for atrr, arg in kwargs.items():
+            setattr(self, atrr, arg)

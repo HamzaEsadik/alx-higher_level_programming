@@ -30,10 +30,3 @@ class Square(Rectangle):
         """
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - "\
                f"{self.size}"
-
-if __name__ == "__main__":
-
-    s1 = Square(5)
-    print(s1)
-    print(s1.area())
-    s1.display()

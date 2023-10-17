@@ -107,7 +107,13 @@ class Rectangle(Base):
                f"{self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
-        """Update method"""
+        """
+        Update the attributes of the rectangle.
+
+        Args:
+        *args: Variable positional arguments.
+        **kwargs: Variable keyword arguments.
+        """
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:

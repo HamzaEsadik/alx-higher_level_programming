@@ -80,7 +80,20 @@ class Rectangle(Base):
 
     def display(self):
         """print to stdout"""
+        print("\n"*self.__y, end='')
         for i in range(self.__height):
+            print(" "*self.__x, end='')
             for j in range(self.__width):
                 print("#", end='')
             print("\n", end='')
+
+    def __str__(self):
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+
+if __name__ == "__main__":
+
+    r1 = Rectangle(4, 6, 2, 1, 12)
+    print(r1)
+
+    r2 = Rectangle(5, 5, 1)
+    print(r2)

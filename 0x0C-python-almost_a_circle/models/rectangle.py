@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Rectangle Module"""
+"""Rectangle Module python3"""
 Base = __import__("base").Base
 
 

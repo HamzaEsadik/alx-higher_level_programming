@@ -4,16 +4,16 @@ Base = __import__("base").Base
 
 
 class Rectangle(Base):
-    '''Rectangle Class'''
+    '''Rectangle Class that enherit from Base'''
     def __init__(self, width, height, x=0, y=0, id=None):
         '''
-        Init Method
+        Init Method for Rectangle Class
 
         Args:
-        -width
-        -width
-        -x
-        -y
+            -width: width of Rectangle
+            -width: width of Rectangle
+            -x: int arg
+            -y: int arg
         '''
         self.__width = width
         self.__height = height

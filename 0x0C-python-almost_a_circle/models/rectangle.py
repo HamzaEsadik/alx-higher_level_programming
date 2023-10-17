@@ -5,14 +5,14 @@ Base = __import__("base").Base
 
 class Rectangle(Base):
     """
-    Rectangle Class that enherit from Base
+    Rectangle Class that inherits from Base.
 
-    arguments:
-        -width: width of triangle
-        -height: height of triangle
-        -x: int
-        -y: int
-        -id: id
+    Arguments:
+        - width (int): Width of the rectangle.
+        - height (int): Height of the rectangle.
+        - x (int): Horizontal position.
+        - y (int): Vertical position.
+        - id: Identifier.
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -97,6 +97,12 @@ class Rectangle(Base):
             print("\n", end='')
 
     def __str__(self):
+        """
+        Return a string representation of the rectangle.
+
+        Format:
+        "[Rectangle] (id) x/y - width/height"
+        """
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "\
                f"{self.__width}/{self.__height}"
 

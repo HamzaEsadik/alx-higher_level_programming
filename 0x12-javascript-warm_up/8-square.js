@@ -7,5 +7,6 @@ if (isNaN(size)) {
     for (let j = 0; j < size; j++) {
       console.log('X', '');
     }
+    console.log('');
   }
 }

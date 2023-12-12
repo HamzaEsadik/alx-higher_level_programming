@@ -7,12 +7,8 @@ module.exports = class Square extends SquareA {
     if (c === undefined) {
       return this.print();
     } else {
-      let A = '';
       for (let i = 0; i < this.width; i++) {
-        A += c;
-      }
-      for (let i = 0; i < this.height; i++) {
-        console.log(A);
+        console.log(c.repeat(this.height));
       }
     }
   }

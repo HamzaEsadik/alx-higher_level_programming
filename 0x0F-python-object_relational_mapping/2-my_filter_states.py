@@ -15,7 +15,7 @@ def main():
         )
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE "
+    cur.execute("SELECT * FROM states WHERE BINARY "
                 "name = '{}' ORDER BY id ASC".format(sys.argv[4]))
     rows = cur.fetchall()
     for row in rows:

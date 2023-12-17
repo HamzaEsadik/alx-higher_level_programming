@@ -21,8 +21,10 @@ def main():
     cur = db.cursor()
     cur.execute(qr, vr)
     rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    re = ""
+    for r in rows:
+        re += r[0] + ", "
+    print(re[0:-2:])
     cur.close()
     db.close()
 

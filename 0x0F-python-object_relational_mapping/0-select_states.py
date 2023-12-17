@@ -1,29 +1,19 @@
 #!/usr/bin/python3
-"""
-Module list state
-"""
-import sys
+'''first module'''
 import MySQLdb
+import sys
 
+dbb = sys.argv[3]
 
-def main():
-    conn = MySQLdb.connect(
-                        host="localhost",
-                        port=3306,
-                        user=sys.argv[1],
-                        passwd=sys.argv[2],
-                        db=sys.argv[3],
-                        charset="utf8"
-                            )
-    cur = conn.cursor()
-    query = "SELECT id,name FROM states ORDER by id ASC"
-    cur.execute(query)
-    row = cur.fetchall()
-    for r in row:
-        print(r)
-    cur.close()
-    conn.close()
+db = MySQLdb.connect(host='localhost',
+                     user=sys.argv[1],
+                     passwd=sys.argv[2],
+                     db=sys.argv[3], port=3306)
 
-
-if __name__ == "__main__":
-    main()
+cur = db.cursor()
+cur.execute("SELECT * FROM states ORDER BY id ASC")
+rows = cur.fetchall()
+for row in rows:
+    print(row)
+cur.close()
+db.close()

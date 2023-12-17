@@ -14,7 +14,8 @@ def main():
         )
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM cities ORDER BY id ASC")
+    cur.execute("SELECT cities.id, cities.name, states.name FROM cities \
+                JOIN states ON state_id = states.id;")
     rows = cur.fetchall()
     for row in rows:
         print(row)

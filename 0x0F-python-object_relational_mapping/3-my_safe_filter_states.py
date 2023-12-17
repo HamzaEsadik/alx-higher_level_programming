@@ -13,7 +13,6 @@ def main():
         db=sys.argv[3],
         port=3306
         )
-    
 
     qr = "SELECT * FROM states WHERE BINARY \
     name = %s ORDER BY id ASC"

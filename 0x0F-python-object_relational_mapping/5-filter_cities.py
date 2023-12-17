@@ -23,7 +23,7 @@ def main():
     rows = cur.fetchall()
     re = ""
     for r in rows:
-        re += r[0] + ", "
+        re = re + r[0] + ", "
     print(re[0:-2:])
     cur.close()
     db.close()

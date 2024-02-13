@@ -2,7 +2,7 @@
 
 const Square = require('./5-rectangle.js');
 
-module.exports = class Square extends SquareA {
+module.exports = class Square extends Square {
   charPrint (c) {
     if (c === undefined) {
       return this.print();

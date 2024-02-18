@@ -12,8 +12,7 @@ def main():
     db = MySQLdb.connect(host="localhost", port=3306, user=user,
                          passwd=ps, db=dbn, charset="utf8")
     cur = db.cursor()
-    query = """SELECT * FROM states WHERE name LIKE %s""", (nm)
-    cur.execute(query + " ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE/ name=%s ORDER BY id ASC", (nm))
     mylist = cur.fetchall()
     for row in mylist:
         print(row)

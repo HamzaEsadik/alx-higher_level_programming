@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-import sys
+"get states"
+from sys import argv
 import MySQLdb
 
 

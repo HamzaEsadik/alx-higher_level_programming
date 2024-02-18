@@ -16,7 +16,8 @@ def main():
     cur.execute(query + " ORDER BY id ASC")
     mylist = cur.fetchall()
     for row in mylist:
-        print(row)
+        if row[1] == nm:
+            print(row)
     cur.close()
     db.close()
 

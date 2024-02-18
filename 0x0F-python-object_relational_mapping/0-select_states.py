@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-
+import sys
+import MySQLdb
 def main():
-    import sys
-    import MySQLdb
     user = sys.argv[1]
     ps = sys.argv[2]
     dbn = sys.argv[3]

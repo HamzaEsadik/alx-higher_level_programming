@@ -14,7 +14,8 @@ def main():
     cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
     mylist = cur.fetchall()
     for row in mylist:
-        print(row)
+        if row[1][0] == 'N':
+            print(row)
     cur.close()
     db.close()
 

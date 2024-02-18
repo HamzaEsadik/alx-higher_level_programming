@@ -10,7 +10,8 @@ def main():
                          passwd=ps, db=dbn, port=3306)
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY states.id ASC")
-
+    cur.close()
+    db.close()
 
 if __name__ == "__main__":
     main()

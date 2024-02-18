@@ -14,7 +14,7 @@ def main():
     cur = db.cursor()
     cur.execute("""SELECT cities.name FROM cities
                 JOIN states ON cities.state_id = states.id
-                WHERE %s=states.name
+                WHERE states.name LIKE %s
                 ORDER BY cities.id ASC""", (st,))
     mylist = cur.fetchall()
     re = ""

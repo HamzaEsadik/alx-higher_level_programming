@@ -12,10 +12,10 @@ def main():
     db = MySQLdb.connect(host="localhost", port=3306, user=user,
                          passwd=ps, db=dbn, charset="utf8")
     cur = db.cursor()
-    cur.execute("""SELECT cities.name FROM cities
-                JOIN states ON cities.state_id = states.id
-                WHERE states.name LIKE %s
-                ORDER BY cities.id ASC""", (st,))
+    cur.execute("SELECT cities.name FROM cities \
+                JOIN states ON cities.state_id = states.id \
+                WHERE states.name LIKE %s \
+                ORDER BY cities.id", (st,))
     mylist = cur.fetchall()
     re = ""
     for r in mylist:

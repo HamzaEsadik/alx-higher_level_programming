@@ -1,14 +1,9 @@
 #!/usr/bin/python3
 '''class definition of a State'''
-from sqlalchemy import create_engine
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 import sys
 
-engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
-                       .format(sys.argv[1], sys.argv[2],
-                               sys.argv[3]), pool_pre_ping=True)
-engine.connect()
 Base = declarative_base()
 
 

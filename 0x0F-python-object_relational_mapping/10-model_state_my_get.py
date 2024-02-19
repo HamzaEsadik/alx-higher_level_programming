@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    for state in session.query(State).order_by(State.id):
+    for state in session.query(State).all():
         if sys.argv[4] in state.name:
             print("{}".format(state.id))
         else:

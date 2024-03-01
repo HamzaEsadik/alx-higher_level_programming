@@ -5,9 +5,10 @@ if __name__ == "__main__":
     import requests
     import sys
     url = 'http://0.0.0.0:5000/search_user'
-    q = ''
-    if sys.argv[1]:
+    try:
         q = sys.argv[1]
+    except Exception:
+        q = ""
     data = {'q': q}
     response = requests.post(url, data=data)
     try:

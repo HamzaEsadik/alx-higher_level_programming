@@ -1,10 +1,14 @@
 #!/usr/bin/python3
 '''task 1: print X-Request-Id'''
 
-if __name__ == "__main__":
-    import sys
+if __name__ == '__main__':
     import urllib.request
+    import sys
     url = sys.argv[1]
-    data = {'email': sys.argv[2]}
-    with urllib.request.urlopen(url, data) as response:
-        print(f"Your email is: {response.read().decode("utf-8")}")
+    value = {"email": sys.argv[2]}
+    data = urllib.parse.urlencode(value)
+    data = data.encode("ascii")
+    req = urllib.request.Request(url, data)
+    with urllib.request.urlopen(req) as response:
+        info = response.read()
+    print(info.decode("ascii"))

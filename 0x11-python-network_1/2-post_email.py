@@ -7,4 +7,4 @@ if __name__ == "__main__":
     url = sys.argv[1]
     data = {'email': sys.argv[2]}
     with urllib.request.urlopen(url, data) as response:
-        print(f"Your email is: {response.read()}")
+        print(f"Your email is: {response.read().decode("utf-8")}")

@@ -8,7 +8,7 @@ REQUEST(URL, function (error, _, body) {
   if (error) {
     console.log(error);
   } else {
-    FS.writeFile(PATH, 'utf8', body, function (error) {
+    FS.writeFile(PATH, body, 'utf8', function (error) {
       if (error) {
         console.error(error);
       }

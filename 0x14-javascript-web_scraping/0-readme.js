@@ -1,4 +1,4 @@
-#!/snap/bin/node
+#!/usr/bin/node
 const FS = require('fs');
 const FILE_PATH = process.argv[2];
 

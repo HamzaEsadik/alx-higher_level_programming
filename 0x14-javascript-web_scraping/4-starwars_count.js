@@ -1,9 +1,9 @@
 #!/usr/bin/node
 const URL = process.argv[2];
 const REQUEST = require('request');
+let count = 0;
 
 REQUEST(URL, function (error, _, body) {
-  let count = 0;
   if (error) {
     console.log(error);
   } else {

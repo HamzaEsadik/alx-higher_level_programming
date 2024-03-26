@@ -1,4 +1,4 @@
-#!/snap/bin/node
+#!/usr/bin/node
 const URL = process.argv[1];
 const REQUEST = require('request');
 

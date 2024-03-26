@@ -13,6 +13,6 @@ REQUEST(URL, function (error, _, body) {
         count++;
       }
     }
+    console.log(count);
   }
-  console.log(count);
 });
